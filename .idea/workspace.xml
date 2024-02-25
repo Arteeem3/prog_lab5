@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="86c5c108-5a33-40b3-94a5-13b2c60bccae" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/commands/Add.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/commands/AddIfMax.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/commands/Clear.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/commands/Command.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/commands/Describable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/commands/Executable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/commands/Exit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/commands/Help.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/commands/History.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/commands/Info.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/commands/RemoveById.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/commands/Save.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/commands/Show.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/commands/Update.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/managers/CollectionManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/managers/CommandManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/managers/DumpManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/models/Ask.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/models/Coordinates.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/models/Label.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/models/MusicBand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/models/MusicGenre.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/utility/Console.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/utility/Element.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/utility/ExecutionResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/utility/LocalDateAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/utility/Runner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/utility/StandardConsole.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/utility/Validatable.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/java/Main.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/managers/DumpManager.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/models/MusicBand.java" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2cjiExG4JY5LvEMypWKIdFFfWkC" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/prog_lab5",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\prog_lab5\src\main\java" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="prog_lab5" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-17.0.9-corretto-17.0.9-f644763e9732-ebaef533" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="86c5c108-5a33-40b3-94a5-13b2c60bccae" name="Changes" comment="" />
+      <created>1708617678394</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1708617678394</updated>
+      <workItem from="1708617679532" duration="4223000" />
+      <workItem from="1708631281488" duration="711000" />
+      <workItem from="1708701339567" duration="2968000" />
+      <workItem from="1708768561067" duration="12938000" />
+      <workItem from="1708850509319" duration="17897000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

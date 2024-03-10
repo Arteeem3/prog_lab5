@@ -40,7 +40,7 @@ public class Info extends Command {
                 lastSaveTime.toLocalDate().toString() + " " + lastSaveTime.toLocalTime().toString();
 
         console.println("Сведения о коллекции:");
-        console.println(" Тип: " + collectionManager.getCollection().getClass().toString());
+        console.println(" Тип: " + collectionManager.getCollection().getClass());
         console.println(" Количество элементов: " + collectionManager.getCollection().size());
         console.println(" Дата последнего сохранения: " + lastSaveTimeString);
         console.println(" Дата последней инициализации: " + lastInitTimeString);

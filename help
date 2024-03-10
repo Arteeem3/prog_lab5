@@ -1,0 +1,47 @@
+[
+  {
+    "id": 2,
+    "name": "sdfsdf",
+    "coordinates": {
+      "x": 12.0,
+      "y": 12.0
+    },
+    "creationDate": "2024-03-10",
+    "numberOfParticipants": 15,
+    "establishmentDate": "2024-03-10",
+    "genre": "ROCK",
+    "label": {
+      "name": "asdsfdsdasdadssa"
+    }
+  },
+  {
+    "id": 3,
+    "name": "12",
+    "coordinates": {
+      "x": 12.0,
+      "y": 12.0
+    },
+    "creationDate": "2024-03-10",
+    "numberOfParticipants": 13,
+    "establishmentDate": "2024-03-10",
+    "genre": "ROCK",
+    "label": {
+      "name": "asdasdadssa"
+    }
+  },
+  {
+    "id": 4,
+    "name": "sdfsdf",
+    "coordinates": {
+      "x": 12.0,
+      "y": 12.0
+    },
+    "creationDate": "2024-03-10",
+    "numberOfParticipants": 15,
+    "establishmentDate": "2024-03-10",
+    "genre": "ROCK",
+    "label": {
+      "name": "asdsfdsdasdadssa"
+    }
+  }
+]

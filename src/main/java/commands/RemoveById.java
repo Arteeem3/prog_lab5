@@ -38,7 +38,7 @@ public class RemoveById extends Command {
         collectionManager.remove((int) id);
         collectionManager.addLog("remove " + id, true);
         collectionManager.update();
-        console.println("Дракон успешно удалён!");
+        console.println("MusicBand успешно удалён!");
         return true;
     }
 }

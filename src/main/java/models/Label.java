@@ -7,7 +7,7 @@ import java.util.Objects;
  * Лейбл
  */
 public class Label implements Validatable {
-    private final String name;
+    private String name;
 
     public Label(String name) {
         this.name = name;
@@ -24,6 +24,9 @@ public class Label implements Validatable {
 
     public String getName() {
         return name;
+    }
+    public void setName(String name){
+        this.name = name;
     }
 
     @Override

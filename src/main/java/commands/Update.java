@@ -39,7 +39,7 @@ public class Update extends Command {
                 return false;
             }
 
-            console.println("* Создание нового Дракона:");
+            console.println("* Создание нового MusicBand:");
             var d = Ask.askMusicBand(console, collectionManager.getFreeId());
             if (d != null && d.validate()) {
                 collectionManager.add(d);
@@ -56,7 +56,7 @@ public class Update extends Command {
                 collectionManager.update();
                 return true;
             } else {
-                console.println("Поля Дракона не валидны! Дракон не создан!");
+                console.println("Поля MusicBand не валидны! MusicBand не создан!");
                 return false;
             }
         } catch (Ask.AskBreak e) {

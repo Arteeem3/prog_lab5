@@ -29,7 +29,10 @@ public class Main {
             register("history", new History(console, this));
             register("info", new Info(console, collectionManager));
             register("show", new Show(console, collectionManager));
+            register("execute_script", new ExecuteScript(console));
             register("add", new Add(console, collectionManager));
+            register("add_if_max", new AddIfMax(console, collectionManager));
+            register("count_less_than_label", new CountLessThanLabel(console, collectionManager));
             register("update", new Update(console, collectionManager));
             register("remove_by_id", new RemoveById(console, collectionManager));
             register("clear", new Clear(console, collectionManager));

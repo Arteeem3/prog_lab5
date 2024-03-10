@@ -17,10 +17,11 @@ public class Ask {
                 if (!name.isEmpty()) break;
             }
             var coordinates = askCoordinates(console);
+            var numberOfparticipants = askNumberOfParticipants(console);
             var genre = askMusicGenre(console);
-            var label = new Label("TestLabel");
+            var label = askLabel(console);
 
-            return new MusicBand(id, name, coordinates, genre, label);
+            return new MusicBand(id, name, coordinates, numberOfparticipants, genre, label);
         } catch (NoSuchElementException | IllegalStateException e) {
             console.printError("Ошибка чтения");
             return null;
@@ -68,6 +69,40 @@ public class Ask {
                 } else return null;
             }
             return r;
+        } catch (NoSuchElementException | IllegalStateException e) {
+            console.printError("Ошибка чтения");
+            return null;
+        }
+    }
+
+    public static Label askLabel(Console console) throws AskBreak {
+        try {
+            String name;
+            while (true) {
+                console.print("Label: ");
+                name = console.readln().trim();
+                if (name.equals("exit")) throw new AskBreak();
+                if (!name.isEmpty()) break;
+            }
+            return new Label(name);
+        } catch (NoSuchElementException | IllegalStateException e) {
+            console.printError("Ошибка чтения");
+            return null;
+        }
+    }
+
+    public static Long askNumberOfParticipants(Console console) throws AskBreak {
+        try {
+            Long chislo;
+            while (true) {
+                console.print("NumberOfParticipants: ");
+                var line = console.readln().trim();
+                if (line.equals("exit")) throw new AskBreak();
+                if (!line.equals("")) {
+                    try { chislo = Long.parseLong(line); if (chislo>0) break; }catch(NumberFormatException e) { }
+                }
+            }
+            return chislo;
         } catch (NoSuchElementException | IllegalStateException e) {
             console.printError("Ошибка чтения");
             return null;

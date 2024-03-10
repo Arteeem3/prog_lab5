@@ -4,7 +4,6 @@ import managers.CollectionManager;
 import models.Ask;
 import models.MusicBand;
 import utility.Console;
-import utility.ExecutionResponse;
 
 /**
  * Команда 'add'. Добавляет новый элемент в коллекцию.
@@ -14,7 +13,7 @@ public class Add extends Command {
     private final CollectionManager collectionManager;
 
     public Add(Console console, CollectionManager collectionManager) {
-        super("add {element}", "добавить новый элемент в коллекцию");
+        super("add {element}/ add", "добавить новый элемент в коллекцию");
         this.console = console;
         this.collectionManager = collectionManager;
     }
@@ -32,16 +31,16 @@ public class Add extends Command {
                 return false;
             }
 
-            console.println("* Создание нового Дракона:");
+            console.println("* Создание нового MusicBand:");
             MusicBand d = Ask.askMusicBand(console, collectionManager.getFreeId());
 
             if (d != null && d.validate()) {
                 collectionManager.add(d);
                 collectionManager.addLog("add " + d.getId(), true);
-                console.println("Дракон успешно добавлен!");
+                console.println("MusicBand успешно добавлен!");
                 return true;
             } else {
-                console.printError("Поля дракона не валидны! Дракон не создан!");
+                console.printError("Поля MusicBand не валидны! MusicBand не создан!");
                 return false;
             }
         } catch (Ask.AskBreak e) {

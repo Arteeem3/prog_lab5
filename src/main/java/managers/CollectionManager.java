@@ -1,5 +1,6 @@
 package managers;
 
+import models.Label;
 import models.MusicBand;
 
 
@@ -11,7 +12,7 @@ import java.util.*;
  * @author Artem Sokolov
  */
 public class CollectionManager {
-    private int currentId = 1;
+    private int currentId = 0;
     private Map<Integer, MusicBand> musicBands = new HashMap<>();
     private LinkedHashSet<MusicBand> collection = new LinkedHashSet<>();
     private LocalDateTime lastInitTime;
@@ -55,6 +56,10 @@ public class CollectionManager {
         lastSaveTime = LocalDateTime.now();
     }
 
+    public void resetCurrentId() {
+        currentId = 0;
+    }
+
     /**
      * Получить MusicBand по ID
      */
@@ -71,6 +76,14 @@ public class CollectionManager {
     public int getFreeId() {
         while (byId(++currentId) != null);
         return currentId;
+    }
+
+    public String count_less_than_label(String label) {
+        long count = collection.stream()
+                .filter(musicBand -> musicBand.getLabel().toString().length() < label.length())
+                .count();
+
+        return "Количество элементов, меньших, чем [" + label + "]: " + count;
     }
 
     /**

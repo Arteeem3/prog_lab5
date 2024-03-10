@@ -27,6 +27,9 @@ public class DumpManager {
     private final Console console;
 
     public DumpManager(String fileName, Console console) {
+        if (!(new File(fileName).exists())) {
+            fileName = "../" + fileName;
+        }
         this.fileName = fileName;
         this.console = console;
     }
@@ -38,7 +41,7 @@ public class DumpManager {
     public void writeCollection(Collection<MusicBand> collection) {
         try (PrintWriter collectionPrintWriter = new PrintWriter(new File(fileName))) {
             collectionPrintWriter.println(gson.toJson(collection));
-            console.println("Коллекция успешна сохранена в файл!");
+            console.println("Коллекция успешно сохранена в файл!");
         } catch (IOException exception) {
             console.printError("Загрузочный файл не может быть открыт!");
         }
@@ -71,7 +74,7 @@ public class DumpManager {
                 LinkedHashSet<MusicBand> collection = gson.fromJson(jsonString.toString(),
                         collectionType);
 
-                console.println("Коллекция успешна загружена!");
+                console.println("Коллекция успешно загружена!");
                 return collection;
 
             } catch (FileNotFoundException exception) {

@@ -35,10 +35,6 @@ public class MusicBand extends Element implements Validatable {
         this(id, name, coordinates, LocalDate.now(), numberOfParticipants, LocalDate.now(), genre, label);
     }
 
-    public MusicBand(int id, String name, Coordinates coordinates, MusicGenre genre, Label label) {
-        this(id, name, coordinates, LocalDate.now(), 1L, LocalDate.now(), genre, label);
-    }
-
     /**
      * Валидирует правильность полей.
      * @return true, если все верно, иначе false

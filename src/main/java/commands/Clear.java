@@ -44,6 +44,7 @@ public class Clear extends Command {
         }
 
         collectionManager.update();
+        collectionManager.resetCurrentId();
         console.println("Коллекция очищена!");
         return true;
     }

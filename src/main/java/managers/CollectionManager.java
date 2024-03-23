@@ -169,7 +169,7 @@ public class CollectionManager {
      */
     public boolean loadCollection() {
         musicBands.clear();
-        dumpManager.readCollection();
+        collection = dumpManager.readCollection();
         lastInitTime = LocalDateTime.now();
         for (var e : collection)
             if (byId(e.getId()) != null) {
@@ -189,6 +189,7 @@ public class CollectionManager {
 
     @Override
     public String toString() {
+//        System.out.println(collection);
         if (collection.isEmpty()) return "Коллекция пуста!";
 
         StringBuilder info = new StringBuilder();

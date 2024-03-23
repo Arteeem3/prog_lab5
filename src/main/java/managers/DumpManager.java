@@ -73,7 +73,7 @@ public class DumpManager {
 
                 LinkedHashSet<MusicBand> collection = gson.fromJson(jsonString.toString(),
                         collectionType);
-
+//                console.println(collection);
                 console.println("Коллекция успешно загружена!");
                 return collection;
 

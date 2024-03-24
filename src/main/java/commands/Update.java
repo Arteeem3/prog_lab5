@@ -32,27 +32,22 @@ public class Update extends Command {
                 return false;
             }
             long id = -1;
-            try { id = Long.parseLong(arguments[1].trim()); } catch (NumberFormatException e) { console.println("ID не распознан"); return false; }
+            try { id = Long.parseLong(arguments[1].trim());
+                System.out.println(id);} catch (NumberFormatException e) { console.println("ID не распознан"); return false; }
 
-            if (collectionManager.byId((int) id) == null || !collectionManager.getCollection().contains(collectionManager.byId((int) id))) {
+            var old = collectionManager.byId((int) id);
+            if (old == null || !collectionManager.getCollection().contains(old)) {
                 console.println("не существующий ID");
                 return false;
             }
-
+            System.out.println(id);
             console.println("* Создание нового MusicBand:");
-            var d = Ask.askMusicBand(console, collectionManager.getFreeId());
+            var d = Ask.askMusicBand(console, old.getId());
             if (d != null && d.validate()) {
-                collectionManager.add(d);
-                collectionManager.addLog("add " + d.getId(), true);
-                collectionManager.update();
-
-                var old = collectionManager.byId((int) id);
-                collectionManager.swap(d.getId(), id);
-                collectionManager.addLog("swap " + old.getId() + " " + id, false);
-                collectionManager.update();
-
                 collectionManager.remove(old.getId());
                 collectionManager.addLog("remove " + old.getId(), false);
+                collectionManager.add(d);
+                collectionManager.addLog("add " + d.getId(), true);
                 collectionManager.update();
                 return true;
             } else {

@@ -54,14 +54,14 @@ public class Ask {
             return null;
         }
     }
-
+// добавить uppercase
     public static MusicGenre askMusicGenre(Console console) throws AskBreak {
         try {
             MusicGenre r;
             while (true) {
                 console.print("MusicGenre ("+MusicGenre.names()+"): ");
-                var line = console.readln().trim();
-                if (line.equals("exit")) throw new AskBreak();
+                var line = console.readln().trim().toUpperCase();
+                if (line.equals("EXIT")) throw new AskBreak();
                 if (!line.equals("")) {
                     try {
                         r = MusicGenre.valueOf(line); break;

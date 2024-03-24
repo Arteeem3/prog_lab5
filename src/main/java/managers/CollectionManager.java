@@ -1,10 +1,8 @@
 package managers;
 
-import models.Label;
 import models.MusicBand;
 
 
-import java.sql.SQLOutput;
 import java.time.LocalDateTime;
 import java.util.*;
 
@@ -79,12 +77,11 @@ public class CollectionManager {
         return currentId;
     }
 
-    public String count_less_than_label(String label) {
+    public void count_less_than_label(String label) {
         long count = collection.stream()
                 .filter(musicBand -> musicBand.getLabel().toString().length() < label.length())
                 .count();
-
-        return "Количество элементов, меньших, чем [" + label + "]: " + count;
+        System.out.println("Количество элементов, меньших, чем [" + label + "]: " + count);
     }
 
     /**
@@ -98,40 +95,16 @@ public class CollectionManager {
         return true;
     }
 
-    /**
-     * @return true в случае успеха.
-     */
-    public boolean swap(long id, long repId) {
-        var e = byId((int) id);
-        var re = byId((int) repId);
-        if (e == null) return false;
-        if (re == null) return false;
-        List<MusicBand> coll = new ArrayList<MusicBand>(collection);
-        var ind = coll.indexOf(e);
-        var rind = coll.indexOf(re);
-        if (ind < 0) return false;
-        if (rind < 0) return false;
-
-        e.setId((int) repId);
-        re.setId((int) id);
-
-        musicBands.put(e.getId(), e);
-        musicBands.put(re.getId(), re);
-
-        update();
-        return true;
-    }
 
     /**
      * Удаляет MusicBand по ID
      */
-    public boolean remove(int id) {
+    public void remove(int id) {
         var a = byId(id);
-        if (a == null) return false;
-        musicBands.remove(a.getId());
+        if (a == null) return;
+        musicBands.remove(id);
         collection.remove(a);
         update();
-        return true;
     }
 
     /**
@@ -140,6 +113,7 @@ public class CollectionManager {
     public void update() {
         ArrayList<MusicBand> array = new ArrayList<>(collection);
         Collections.sort(array);
+        if (isAscendingSort) Collections.reverse(array);
     }
 
 

@@ -1,6 +1,6 @@
 [
   {
-    "id": 1,
+    "id": 2,
     "name": "65",
     "coordinates": {
       "x": 4.0,
@@ -12,6 +12,21 @@
     "genre": "ROCK",
     "label": {
       "name": "3"
+    }
+  },
+  {
+    "id": 1,
+    "name": "asdasd",
+    "coordinates": {
+      "x": 12.0,
+      "y": 12.0
+    },
+    "creationDate": "2024-03-24",
+    "numberOfParticipants": 23,
+    "establishmentDate": "2024-03-24",
+    "genre": "ROCK",
+    "label": {
+      "name": "sdfsdfsdf"
     }
   }
 ]

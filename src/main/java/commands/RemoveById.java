@@ -31,6 +31,8 @@ public class RemoveById extends Command {
         long id = -1;
         try { id = Long.parseLong(arguments[1].trim()); } catch (NumberFormatException e) { console.println("ID не распознан"); return false; }
 
+        System.out.println(collectionManager.byId((int) id));
+        System.out.println(!collectionManager.getCollection().contains(collectionManager.byId((int) id)));
         if (collectionManager.byId((int) id) == null || !collectionManager.getCollection().contains(collectionManager.byId((int) id))) {
             console.println("не существующий ID");
             return false;

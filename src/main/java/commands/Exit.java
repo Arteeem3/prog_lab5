@@ -1,5 +1,7 @@
 package commands;
 
+import managers.CollectionManager;
+import models.Ask;
 import utility.Console;
 
 /**
@@ -8,10 +10,12 @@ import utility.Console;
  */
 public class Exit extends Command {
     private final Console console;
+    private final CollectionManager collectionManager;
 
-    public Exit(Console console) {
+    public Exit(Console console, CollectionManager collectionManager) {
         super("exit", "завершить программу (без сохранения в файл)");
         this.console = console;
+        this.collectionManager = collectionManager;
     }
 
     /**
@@ -25,6 +29,10 @@ public class Exit extends Command {
             console.println("Использование: '" + getName() + "'");
             return false;
         }
+
+        console.println("Сохранить коллекцию перед завершением программы? yes/no");
+        var line = console.readln().trim().toUpperCase();
+        if (line.equals("YES")) collectionManager.saveCollection();
 
         console.println("Завершение выполнения...");
         return true;

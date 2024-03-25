@@ -4,7 +4,6 @@ import managers.CollectionManager;
 import managers.CommandManager;
 import managers.DumpManager;
 
-import models.MusicBand;
 
 import utility.StandardConsole;
 import utility.Runner;
@@ -37,7 +36,7 @@ public class Main {
             register("remove_by_id", new RemoveById(console, collectionManager));
             register("clear", new Clear(console, collectionManager));
             register("save", new Save(console, collectionManager));
-            register("exit", new Exit(console));
+            register("exit", new Exit(console, collectionManager));
 
         }};
 

@@ -38,10 +38,13 @@ public class AddIfMax extends Command {
             var maxnop = maxNumberOfParticipants();
             assert d != null;
             if (d.getNumberOfParticipants() > maxnop) {
+
                 collectionManager.add(d);
                 console.println("MusicBand успешно добавлен!");
             } else {
-                console.println("MusicBand не добавлен, количество участников не максимальное (" + d.getNumberOfParticipants() + " < " + maxnop +")");
+                d.setNumberOfParticipants(maxnop+1);
+                collectionManager.add(d);
+                console.println("MusicBand добавлен, количество участников максимальное");
             }
             return true;
         } catch (Ask.AskBreak e) {

@@ -71,8 +71,10 @@ public class MusicBand extends Element implements Validatable {
         return creationDate;
     }
 
-    public Long getNumberOfParticipants() {
-        return numberOfParticipants;
+    public Long getNumberOfParticipants() { return numberOfParticipants;}
+
+    public void setNumberOfParticipants(Long numberOfParticipants) {
+        this.numberOfParticipants = numberOfParticipants;
     }
 
     public LocalDate getEstablishmentDate() {
